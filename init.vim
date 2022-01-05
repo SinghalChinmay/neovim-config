@@ -16,18 +16,15 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar themes
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 " Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/Yggdroot/indentLine' " lines with the indents.
+Plug 'https://github.com/Yggdroot/indentLine' " linings when in indent for better view
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/neoclide/coc.nvim'  " Code Completion
 Plug 'https://github.com/morhetz/gruvbox' " Retro Color Schemes
 
-set encoding=UTF-8
-
 call plug#end()
 
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 let g:airline_powerline_fonts = 1
@@ -39,5 +36,8 @@ let g:airline_theme='gruvbox'
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
 
+set encoding=UTF-8
+
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
+
 set clipboard=unnamed
