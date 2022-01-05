@@ -1,0 +1,10 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"json",
+		"markdown"
+	],
+	"python.formatting.provider": "black",
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"python.linting.lintOnSave": true
+}
