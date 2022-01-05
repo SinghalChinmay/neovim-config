@@ -7,7 +7,7 @@
 :set mouse=a
 :set background=dark
 
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
