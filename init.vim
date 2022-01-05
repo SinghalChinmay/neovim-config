@@ -27,7 +27,6 @@ set encoding=UTF-8
 
 call plug#end()
 
-nnoremap <C-t> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
@@ -38,7 +37,7 @@ let g:airline_theme='gruvbox'
 :colorscheme gruvbox
 
 let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
+let g:NERDTreeDirArrowCollapsible="v"
 
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
 set clipboard=unnamed
