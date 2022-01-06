@@ -1,9 +1,13 @@
 {
 	"coc.preferences.formatOnSaveFiletypes": [
 		"json",
-		"markdown"
+		"markdown",
+		"python"
 	],
+	"pyright.enable": true,
+	"python.pythonPath": "/usr/local/bin/python",
 	"python.formatting.provider": "black",
+	"python.formatting.blackPath": "/usr/bin/black",
 	"python.linting.enabled": true,
 	"python.linting.pylintEnabled": true,
 	"python.linting.lintOnSave": true
