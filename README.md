@@ -12,3 +12,5 @@ touch coc-settings.json # If you're gonna use "coc.nvim" plugin.
 ## Screenshots
 
 ![](Images/screenshot.png)
+
+____I am sorry, but idk why my images are never good...you will find a better image if you click it._
