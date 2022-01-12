@@ -6,16 +6,16 @@
 :set softtabstop=4
 :set mouse=a
 :set background=dark
+:set nowrap
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar themes
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
-" Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/Yggdroot/indentLine' " linings when in indent for better view
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
@@ -26,6 +26,7 @@ Plug 'https://github.com/morhetz/gruvbox' " Retro Color Schemes
 call plug#end()
 
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-j> :terminal<CR>
 
 let g:airline_powerline_fonts = 1
 
@@ -38,6 +39,15 @@ let g:NERDTreeDirArrowCollapsible="v"
 
 set encoding=UTF-8
 
+" Selecting the auto-complete options with the Enter key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
+
+" Brackets and quotes autoclose
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap < <><left>
 
 set clipboard=unnamed
