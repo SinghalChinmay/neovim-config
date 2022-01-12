@@ -1,4 +1,4 @@
-# My neovim cofiguration!
+# My neovim configuration!
 
 This is a repo where all my neovim config files are.
 
