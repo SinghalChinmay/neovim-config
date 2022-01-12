@@ -9,3 +9,6 @@ touch init.vim
 touch coc-settings.json # If you're gonna use "coc.nvim" plugin.
 ```
 
+## Screenshots
+
+![](Images/screenshot.png)
