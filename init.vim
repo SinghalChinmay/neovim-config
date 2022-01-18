@@ -18,11 +18,11 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar themes
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/Yggdroot/indentLine' " linings when in indent for better view
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/neoclide/coc.nvim'  " Code Completion
-Plug 'https://github.com/morhetz/gruvbox' " Retro Color Schemes
 " Plug 'https://github.com/nvim-telescope/telescope.nvim' " Find, Filter, Preview, Pick your files! Neovim 0.6 needed
 
 call plug#end()
@@ -32,9 +32,9 @@ nnoremap <C-j> :terminal<CR>
 
 let g:airline_powerline_fonts = 1
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='codedark'
 
-:colorscheme gruvbox
+:colorscheme codedark
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
