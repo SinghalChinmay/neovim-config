@@ -7,6 +7,8 @@
 :set mouse=a
 :set background=dark
 :set nowrap
+:set encoding=UTF-8
+:set clipboard=unnamed
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -18,10 +20,10 @@ Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/Yggdroot/indentLine' " linings when in indent for better view
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/neoclide/coc.nvim'  " Code Completion
 Plug 'https://github.com/morhetz/gruvbox' " Retro Color Schemes
+" Plug 'https://github.com/nvim-telescope/telescope.nvim' " Find, Filter, Preview, Pick your files! Neovim 0.6 needed
 
 call plug#end()
 
@@ -37,8 +39,6 @@ let g:airline_theme='gruvbox'
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
 
-set encoding=UTF-8
-
 " Selecting the auto-complete options with the Enter key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
 
@@ -49,5 +49,5 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap < <><left>
+inoremap ` ``<left>
 
-set clipboard=unnamed
