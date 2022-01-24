@@ -14,8 +14,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar themes
+Plug 'https://github.com/itchyny/lightline.vim' " Status bar
+Plug 'https://github.com/itchyny/vim-gitbranch' " Git branch status for the status bar
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/tomasiser/vim-code-dark'
@@ -30,9 +30,13 @@ call plug#end()
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-j> :terminal<CR>
 
-let g:airline_powerline_fonts = 1
-
-let g:airline_theme='codedark'
+let g:lightline = {
+	'active': 
+	{'left': [['mode', 'paste'],
+	['gitbranch', 'readonly', 'filename', 'modified']]},
+	'component_function': {'gitbranch': 'gitbranch#name'},
+	'colorscheme': 'one'
+}
 
 :colorscheme codedark
 
