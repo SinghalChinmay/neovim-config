@@ -1,6 +1,4 @@
-# My neovim configuration!
-
-This is a repo where all my neovim config files are.
+# My Neovim configuration!
 
 ```bash
 mkdir -p $HOME/.config/nvim
@@ -10,7 +8,4 @@ touch coc-settings.json # If you're gonna use "coc.nvim" plugin.
 ```
 
 ## Screenshots
-
-![](Images/screenshot.png)
-
-_I am sorry, but idk why my images are never good...you will find a better image if you click it._
+You can find the screenshots [here](./Images/)
