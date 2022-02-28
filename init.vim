@@ -18,7 +18,7 @@ Plug 'https://github.com/itchyny/lightline.vim' " Status bar
 Plug 'https://github.com/itchyny/vim-gitbranch' " Git branch status for the status bar
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/martinsione/darkplus.nvim.git'
+Plug 'https://github.com/tomasiser/vim-code-dark' " VSCode theme
 Plug 'https://github.com/Yggdroot/indentLine' " linings when in indent for better view
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
@@ -32,7 +32,7 @@ nnoremap <C-j> :terminal<CR>
 
 let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'gitbranch#name'}, 'colorscheme': 'one'}
 
-:colorscheme darkplus
+:colorscheme codedark
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
