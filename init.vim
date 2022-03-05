@@ -23,6 +23,7 @@ Plug 'https://github.com/Yggdroot/indentLine' " linings when in indent for bette
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/neoclide/coc.nvim'  " Code Completion
+Plug 'https://github.com/github/copilot.vim' " Github copilot integration
 " Plug 'https://github.com/nvim-telescope/telescope.nvim' " Find, Filter, Preview, Pick your files! Neovim 0.6 needed
 
 call plug#end()
