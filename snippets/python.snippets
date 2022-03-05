@@ -1,0 +1,23 @@
+snippet aoc "Advent of Code snippet"
+import aoc_helper
+from pathlib import Path
+
+with open(Path(__file__).parents[0].joinpath('input.txt')) as f:
+	data = f.read().splitlines()
+
+
+def part_one():
+	pass
+
+
+def part_two():
+	pass
+
+
+print(part_one())
+# print(part_two())
+
+# aoc_helper.lazy_submit(day=1, year=20XX, solution=part_one)
+# aoc_helper.lazy_submit(day=1, year=20XX, solution=part_two)
+
+endsnippet
