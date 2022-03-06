@@ -24,7 +24,9 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/neoclide/coc.nvim'  " Code Completion
 Plug 'https://github.com/github/copilot.vim' " Github copilot integration
-" Plug 'https://github.com/nvim-telescope/telescope.nvim' " Find, Filter, Preview, Pick your files! Neovim 0.6 needed
+Plug 'https://github.com/glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file args.
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf.vim' " These plugins are requires for 'dashboard-nvim' to work.
 
 call plug#end()
 
@@ -37,6 +39,10 @@ let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonl
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
+
+let g:dashboard_default_executive = 'fzf' " I am using fzf as a fuzzy finder.
+
+let g:indentLine_fileTypeExclude = ['dashboard'] " Doesn't put indent lines on the dashboard.
 
 " Selecting the auto-complete options with the Enter key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
