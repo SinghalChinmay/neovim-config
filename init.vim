@@ -30,7 +30,12 @@ Plug 'junegunn/fzf.vim' " These plugins are requires for 'dashboard-nvim' to wor
 
 call plug#end()
 
+" NerdTree keybindings
 nnoremap <C-t> :NERDTreeToggle<CR>
+noremap <C-LEFT> :tabprevious<CR>
+noremap <C-RIGHT> :tabnext<CR>
+
+" Open the terminal.
 nnoremap <C-j> :terminal<CR>
 
 " Setting up my status bar.
