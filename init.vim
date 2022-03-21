@@ -41,7 +41,7 @@ nnoremap <C-j> :terminal<CR>
 " Setting up my status bar.
 let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'gitbranch#name'}, 'colorscheme': 'one'}
 
-:colorscheme oceanic_material
+:colorscheme PaperColor
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
