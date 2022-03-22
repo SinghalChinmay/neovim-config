@@ -16,12 +16,12 @@ Plug 'preservim/nerdtree' " NerdTree
 Plug 'tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'itchyny/lightline.vim' " Status bar
 Plug 'itchyny/vim-gitbranch' " Git branch status for the status bar
+Plug 'mg979/vim-visual-multi' " Multiple cursors
 Plug 'ap/vim-css-color' " CSS Color Preview
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'tomasiser/vim-code-dark' " VSCode theme
 Plug 'Yggdroot/indentLine' " linings when in indent for better view
 Plug 'ryanoasis/vim-devicons' " Developer Icons
-Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'neoclide/coc.nvim'  " Code Completion
 Plug 'github/copilot.vim' " Github copilot integration
 Plug 'glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file args.
