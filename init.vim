@@ -9,6 +9,7 @@
 :set nowrap
 :set encoding=UTF-8
 :set clipboard=unnamed
+:setlocal spell spelllang=en
 
 call plug#begin('~/.config/nvim/plugged')
 
