@@ -25,6 +25,7 @@ Plug 'Yggdroot/indentLine' " linings when in indent for better view
 Plug 'ryanoasis/vim-devicons' " Developer Icons
 Plug 'neoclide/coc.nvim'  " Code Completion
 Plug 'github/copilot.vim' " Github copilot integration
+Plug 'rafi/vim-venom' " Virtual environment management for python
 Plug 'glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file args.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " These plugins are requires for 'dashboard-nvim' to work.
