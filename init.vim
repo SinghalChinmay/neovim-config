@@ -43,6 +43,9 @@ nnoremap <C-j> :terminal<CR>
 " Open the diagnostics window.
 noremap <C-a> :CocDiagnostics<CR>
 
+" Open copilot completions
+noremap <C-k> :Copilot<CR>
+
 " Setting up my status bar.
 let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'gitbranch#name'}, 'colorscheme': 'one'}
 
