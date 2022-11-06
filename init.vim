@@ -14,7 +14,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'preservim/nerdtree' " NerdTree
-Plug 'tpope/vim-commentary' " For Commenting gcc & gc
+Plug 'tpope/vim-commentary' " gcc for commenting the current line, and gc + <Up>/<Down> for commenting multiple lines
 Plug 'itchyny/lightline.vim' " Status bar
 Plug 'itchyny/vim-gitbranch' " Git branch status for the status bar
 Plug 'mg979/vim-visual-multi' " Multiple cursors
@@ -28,25 +28,11 @@ Plug 'github/copilot.vim' " Github copilot integration
 Plug 'rafi/vim-venom' " Virtual environment management for python
 Plug 'glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file args.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' " These plugins are requires for 'dashboard-nvim' to work.
+Plug 'junegunn/fzf.vim' " These plugins are required for 'dashboard-nvim' to work.
 
 call plug#end()
 
-" NerdTree keybindings
-nnoremap <C-t> :NERDTreeToggle<CR>
-noremap <C-LEFT> :tabprevious<CR>
-noremap <C-RIGHT> :tabnext<CR>
-
-" Open the terminal.
-nnoremap <C-j> :terminal<CR>
-
-" Open the diagnostics window.
-noremap <C-a> :CocDiagnostics<CR>
-
-" Open copilot completions
-noremap <C-k> :Copilot<CR>
-
-" Setting up my status bar.
+" Setting up the status bar.
 let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'gitbranch#name'}, 'colorscheme': 'one'}
 
 :colorscheme codedark
@@ -58,10 +44,26 @@ let g:dashboard_default_executive = 'fzf' " I am using fzf as a fuzzy finder for
 
 let g:indentLine_fileTypeExclude = ['dashboard'] " Doesn't put indent lines on the dashboard.
 
-" Selecting the auto-complete options with the Enter key
-inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
 
-" Brackets and quotes autoclose
+" Keybindings for normal mode
+
+" NerdTree keybindings
+nnoremap <C-t> :NERDTreeToggle<CR>
+noremap <C-LEFT> :tabprevious<CR>
+noremap <C-RIGHT> :tabnext<CR>
+
+nnoremap <C-j> :terminal<CR>
+
+" Open the diagnostics window
+noremap <C-a> :CocDiagnostics<CR>
+
+" Open copilot completions
+noremap <C-k> :Copilot<CR>
+
+
+" Keybindings in insert mode
+
+" Autoclose for brackets.
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -69,4 +71,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap < <><left>
 inoremap ` ``<left>
+
+" Selecting the auto-complete options with the Enter key
+inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
 
