@@ -60,6 +60,10 @@ noremap <C-a> :CocDiagnostics<CR>
 " Open copilot completions
 noremap <C-k> :Copilot<CR>
 
+" VSCode related
+noremap <C-Up> ddkP
+noremap <C-Down> ddjP
+noremap <C-d> yykp
 
 " Keybindings in insert mode
 
@@ -75,3 +79,4 @@ inoremap ` ``<left>
 " Selecting the auto-complete options with the Enter key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
 
+inoremap jj <esc> 
