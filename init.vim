@@ -29,6 +29,7 @@ Plug 'rafi/vim-venom' " Virtual environment management for python
 Plug 'glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file args.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " These plugins are required for 'dashboard-nvim' to work.
+Plug 'wakatime/vim-wakatime' " Wakatime plugin for time tracking.
 
 call plug#end()
 
@@ -79,4 +80,5 @@ inoremap ` ``<left>
 " Selecting the auto-complete options with the Enter key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
 
-inoremap jj <esc> 
+" Keybinding for going to normal mode + Auto save
+inoremap jj <esc>:w<CR>
