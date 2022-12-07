@@ -77,8 +77,9 @@ inoremap { {}<left>
 inoremap < <><left>
 inoremap ` ``<left>
 
-" Selecting the auto-complete options with the Enter key
+" Selecting the auto-complete options with the Enter/Tab key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 " Keybinding for going to normal mode + Auto save
 inoremap jj <esc>:w<CR>
