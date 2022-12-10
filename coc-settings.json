@@ -13,5 +13,10 @@
 	"python.linting.flake8Path": "~/.local/bin/flake8",
 	"python.linting.lintOnSave": true,
 	"tabnine.limit": 5,
-	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+	"snippets.extends": {
+		"cpp": [
+			"c"
+		]
+	}
 }
