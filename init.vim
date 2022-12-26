@@ -30,13 +30,14 @@ Plug 'glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " These plugins are required for 'dashboard-nvim' to work.
 Plug 'wakatime/vim-wakatime' " Wakatime plugin for time tracking.
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
 " Setting up the status bar.
-let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'gitbranch#name'}, 'colorscheme': 'one'}
-
 :colorscheme codedark
+
+let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]}, 'component_function': {'gitbranch': 'gitbranch#name'}, 'colorscheme': 'one'}
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
@@ -45,10 +46,14 @@ let g:dashboard_default_executive = 'fzf' " I am using fzf as a fuzzy finder for
 
 let g:indentLine_fileTypeExclude = ['dashboard'] " Doesn't put indent lines on the dashboard.
 
+let mapleader = " "
+
+autocmd VimEnter * NERDTree | wincmd p
 
 " Keybindings for normal mode
 
 " NerdTree keybindings
+noremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 noremap <C-LEFT> :tabprevious<CR>
 noremap <C-RIGHT> :tabnext<CR>
@@ -69,13 +74,13 @@ noremap <C-d> yykp
 " Keybindings in insert mode
 
 " Autoclose for brackets.
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap < <><left>
-inoremap ` ``<left>
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap < <><left>
+" inoremap ` ``<left>
 
 " Selecting the auto-complete options with the Enter/Tab key
 inoremap <expr> <Return> pumvisible() ? coc#_select_confirm() : "<Return>"
