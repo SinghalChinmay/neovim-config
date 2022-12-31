@@ -1,5 +1,6 @@
 let mapleader = " "
 
+" Importing files.
 runtime ./plug.vim
 runtime ./keyboard.vim
 
@@ -27,7 +28,6 @@ let g:NERDTreeDirArrowCollapsible="v"
 let g:dashboard_default_executive = 'fzf' " I am using fzf as a fuzzy finder for the dashboard.
 
 let g:indentLine_fileTypeExclude = ['dashboard'] " Doesn't put indent lines on the dashboard.
-
 
 autocmd VimEnter * NERDTree | wincmd p
 

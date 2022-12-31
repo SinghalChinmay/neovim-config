@@ -13,7 +13,7 @@ Plug 'ryanoasis/vim-devicons' " Developer Icons
 Plug 'neoclide/coc.nvim'  " Code Completion
 Plug 'github/copilot.vim' " Github copilot integration
 Plug 'rafi/vim-venom' " Virtual environment management for python
-Plug 'glepnir/dashboard-nvim' " Dashboard, when opening neovim without any file args.
+Plug 'mhinz/vim-startify' " Dashboard, when opening neovim without any file args.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " These plugins are required for 'dashboard-nvim' to work.
 Plug 'wakatime/vim-wakatime' " Wakatime plugin for time tracking.
