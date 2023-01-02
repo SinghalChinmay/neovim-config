@@ -17,7 +17,6 @@ Plug 'mhinz/vim-startify' " Dashboard, when opening neovim without any file args
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " These plugins are required for 'dashboard-nvim' to work.
 Plug 'wakatime/vim-wakatime' " Wakatime plugin for time tracking.
-Plug 'jiangmiao/auto-pairs'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 call plug#end()

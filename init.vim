@@ -24,10 +24,7 @@ let g:lightline = {'active': {'left': [['mode', 'paste'], ['gitbranch', 'readonl
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="v"
-
-let g:dashboard_default_executive = 'fzf' " I am using fzf as a fuzzy finder for the dashboard.
-
-let g:indentLine_fileTypeExclude = ['dashboard'] " Doesn't put indent lines on the dashboard.
+let g:NERDTreeShowHidden=1
 
 autocmd VimEnter * NERDTree | wincmd p
 
