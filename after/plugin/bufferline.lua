@@ -13,7 +13,7 @@ require("bufferline").setup {
 	}
 }
 
-vim.keymap.set("n", "<C-RIGHT>", ":BufferLineCycleNext<CR>") -- Go to next buffer
-vim.keymap.set("n", "<C-LEFT>", ":BufferLineCyclePrev<CR>") -- Go to previous buffer
+vim.keymap.set("n", "<C-RIGHT>", vim.cmd.BufferLineCycleNext) -- Go to next buffer
+vim.keymap.set("n", "<C-LEFT>", vim.cmd.BufferLineCyclePrev) -- Go to previous buffer
 vim.keymap.set("n", "<leader>q", ":Bdelete!<CR>") -- Delete buffer without messing the layout
 

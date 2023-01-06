@@ -21,5 +21,5 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-key.set("n", "<C-j>", ":ToggleTerm<CR>") -- Toggling the terminal
+key.set("n", "<C-j>", vim.cmd.ToggleTerm) -- Toggling the terminal
 
