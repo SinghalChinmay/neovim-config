@@ -8,18 +8,18 @@ require("toggleterm").setup({
 }
 )
 
-local key = vim.keymap
+local bind = vim.keymap.set
 
 function _G.set_terminal_keymaps()
 	local opts = {buffer = 0}
-	key.set('t', '<esc>', [[<C-\><C-n>]], opts)
-	key.set('t', 'jk', [[<C-\><C-n>]], opts) -- Comming back to normal mode from insert mode in the terminal
-	key.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-	key.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-	key.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-	key.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+	bind('t', '<esc>', [[<C-\><C-n>]], opts)
+	bind('t', 'jk', [[<C-\><C-n>]], opts) -- Comming back to normal mode from insert mode in the terminal
+	bind('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+	bind('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+	bind('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+	bind('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-key.set("n", "<C-j>", vim.cmd.ToggleTerm) -- Toggling the terminal
+bind("n", "<C-j>", vim.cmd.ToggleTerm) -- Toggling the terminal
 

@@ -47,6 +47,8 @@ return require('packer').startup(function(use)
 	use 'goolord/alpha-nvim' -- Dashboard
 	use 'wakatime/vim-wakatime'
 
+	use 'ThePrimeagen/harpoon'
+
 	-- Markdown Previewer
 	use({ 
 		"iamcco/markdown-preview.nvim",
@@ -70,6 +72,11 @@ return require('packer').startup(function(use)
 	}
 	use "rafi/vim-venom" -- Virtual environment management for python
 	-- use "github/copilot.vim"
+	
+	use {
+		'dsznajder/vscode-es7-javascript-react-snippets',
+		run = 'yarn install --frozen-lockfile && yarn compile'
+	}
 
 	use 'tpope/vim-fugitive'
 	use 'mbbill/undotree' -- Managing undos and redos

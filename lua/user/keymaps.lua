@@ -1,19 +1,21 @@
-local key = vim.keymap
+local bind = vim.keymap.set
 
--- Normal mode keybindings
-key.set('n', '<A-Up>', 'ddkP')
-key.set('n', '<A-Down>', 'ddjP')
-key.set('n', '<C-d>', 'yyjP') 
+-- Normal + Visual mode keybindings
+bind('n', '<A-Up>', 'ddkP')
+bind('n', '<A-Down>', 'ddjP')
+bind('n', '<C-d>', 'yyjP')
+bind({'n', 'x'}, '<leader>d', [["_d]]) -- Doesn't copy to clipboard on deletion
+bind('x', '<leader>p', [["_dP]])
 
 -- Insert mode key bindings
 
-key.set('i', 'jj', '<Esc>:w<cr>') -- Go to normal mode + save
+bind('i', 'jj', '<Esc>:w<cr>') -- Go to normal mode + save
 
 -- Autoclose brackets and strings
-key.set('i', '"', '""<left>')
-key.set('i', "'", "''<left>")
-key.set('i', '(', '()<left>')
-key.set('i', '[', '[]<left>')
-key.set('i', '{', '{}<left>')
-key.set('i', '`', '``<left>')
+bind('i', '"', '""<left>')
+bind('i', "'", "''<left>")
+bind('i', '(', '()<left>')
+bind('i', '[', '[]<left>')
+bind('i', '{', '{}<left>')
+bind('i', '`', '``<left>')
 

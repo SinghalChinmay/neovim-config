@@ -1,19 +1,19 @@
 
-local key = vim.keymap
+local bind = vim.keymap.set
 
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 
 vim.opt.signcolumn = "yes"
 
 -- Use Enter/Tab key for selecting the completion
-key.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "<Return>"]], opts)
-key.set("i", "<Tab>", [[coc#pum#visible() ? coc#pum#confirm() : "<Tab>"]], opts)
+bind("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "<Return>"]], opts)
+bind("i", "<Tab>", [[coc#pum#visible() ? coc#pum#confirm() : "<Tab>"]], opts)
 
-key.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
-key.set("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
-key.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-key.set("n", "gr", "<Plug>(coc-references)", {silent = true})
-key.set("n", "<C-a>", vim.cmd.CocDiagnostics)
+bind("n", "gd", "<Plug>(coc-definition)", {silent = true})
+bind("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
+bind("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+bind("n", "gr", "<Plug>(coc-references)", {silent = true})
+bind("n", "<C-a>", vim.cmd.CocDiagnostics)
 
 -- keyset("n", "<C-k>", ":Copilot<CR>") -- Copilot completions
 
