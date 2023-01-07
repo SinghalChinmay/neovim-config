@@ -1,9 +1,7 @@
 
 function change_theme(theme)
-	to_set = theme or "codedark"
-	if to_set == "material" then 
-		vim.g.material_style = "darker" 
-	end
+	to_set = theme or "material"
+	vim.g.material_style = "darker" 	
 	vim.cmd.colorscheme(to_set)
 end
 
