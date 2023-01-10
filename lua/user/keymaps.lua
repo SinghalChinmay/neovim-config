@@ -7,7 +7,8 @@ bind('v', '<A-Up>', ":m '<-2<CR>gv=gv")
 bind('n', '<A-Down>', ":m +1<CR>==") -- == Reindents the line
 bind('n', '<A-Up>', ":m -2<CR>==")
 
-bind('n', '<C-d>', 'yyjP')
+bind('n', '<A-d>', 'yyjP')
+bind('n', '<leader>aa', 'ggVG')
 bind({'n', 'x'}, '<leader>d', [["_d]]) -- Doesn't copy to clipboard on deletion
 
 bind('n', '<leader>fr', [[:%s//<left>]]) -- Find and replace an occurrence all over the file.
