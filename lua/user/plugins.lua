@@ -84,7 +84,7 @@ return require('packer').startup(function(use)
 	}
 	use "rafi/vim-venom" -- Virtual environment management for python
 	-- use "github/copilot.vim"
-	
+
 	use {
 		'dsznajder/vscode-es7-javascript-react-snippets',
 		run = 'yarn install --frozen-lockfile && yarn compile'
@@ -92,6 +92,8 @@ return require('packer').startup(function(use)
 
 	use 'tpope/vim-fugitive'
 	use 'mbbill/undotree' -- Managing undos and redos
+
+	use 'jiangmiao/auto-pairs' -- Auto Pair plugin
 
 	if packer_bootstrap then
 		require("packer").sync()

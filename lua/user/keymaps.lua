@@ -19,11 +19,3 @@ bind('x', '<leader>p', [["_dP]])
 
 bind('i', 'jj', '<Esc>:w<cr>') -- Go to normal mode + save
 
--- Autoclose brackets and strings
-bind('i', '"', '""<left>')
-bind('i', "'", "''<left>")
-bind('i', '(', '()<left>')
-bind('i', '[', '[]<left>')
-bind('i', '{', '{}<left>')
-bind('i', '`', '``<left>')
-
