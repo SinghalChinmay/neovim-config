@@ -21,3 +21,5 @@ bind("n", "<C-a>", vim.cmd.CocDiagnostics)
 vim.g.venom_loaded = 1
 require('venom').setup()
 
+vim.g.python3_host_prog = "/usr/bin/python3"
+
