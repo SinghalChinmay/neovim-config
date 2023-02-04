@@ -94,6 +94,8 @@ return require('packer').startup(function(use)
 
 	use 'jiangmiao/auto-pairs' -- Auto Pair plugin
 
+	use 'andweeb/presence.nvim' -- Discord rich presence
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
