@@ -87,9 +87,10 @@ return require('packer').startup(function(use)
 	use {
 		'dsznajder/vscode-es7-javascript-react-snippets',
 		run = 'yarn install --frozen-lockfile && yarn compile'
-	}
+	} -- ReactJS snippets
 
 	use 'tpope/vim-fugitive'
+	use {'lewis6991/gitsigns.nvim', config = function () require('gitsigns').setup() end}
 	use 'mbbill/undotree' -- Managing undos and redos
 
 	use 'jiangmiao/auto-pairs' -- Auto Pair plugin
