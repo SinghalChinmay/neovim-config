@@ -8,7 +8,7 @@ bind("n", "<C-o>", ui.toggle_quick_menu)
 bind("n", "<C-[>", function() ui.nav_next() end)
 bind("n", "<C-]>", function() ui.nav_next() end)
 
-bind("n", "<C-f>", function() ui.nav_file(1) end)
-bind("n", "<C-g>", function() ui.nav_file(2) end)
-bind("n", "<C-h>", function() ui.nav_file(3) end)
+bind("n", "<C-j>", function() ui.nav_file(1) end)
+bind("n", "<C-k>", function() ui.nav_file(2) end)
+bind("n", "<C-l>", function() ui.nav_file(3) end)
 
