@@ -80,13 +80,13 @@ local function open_nvim_tree(data)
 	local real_file = vim.fn.filereadable(data.file) == 1
 
 	-- buffer is a [No Name]
-	local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+	-- local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
 
 	-- &ft
 	local filetype = vim.bo[data.buf].ft
 
 	-- only files please
-	if not real_file and not no_name then
+	if not real_file then
 		return
 	end
 

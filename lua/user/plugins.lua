@@ -90,12 +90,14 @@ return require('packer').startup(function(use)
 	} -- ReactJS snippets
 
 	use 'tpope/vim-fugitive'
-	use {'lewis6991/gitsigns.nvim', config = function () require('gitsigns').setup() end}
+	use 'lewis6991/gitsigns.nvim'
 	use 'mbbill/undotree' -- Managing undos and redos
 
 	use 'jiangmiao/auto-pairs' -- Auto Pair plugin
 
 	use 'andweeb/presence.nvim' -- Discord rich presence
+
+	-- use 'segeljakt/vim-silicon' -- Code screenshots
 
 	if packer_bootstrap then
 		require("packer").sync()
