@@ -1,7 +1,6 @@
-
-function change_theme(theme)
-	to_set = theme or "material"
-	vim.g.material_style = "darker" 	
+function _G.change_theme(theme)
+	local to_set = theme or "darkplus"
+	vim.g.material_style = "darker"
 	vim.cmd.colorscheme(to_set)
 end
 

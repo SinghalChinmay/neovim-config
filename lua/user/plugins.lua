@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 
 	-- Colorschemes
 	use 'tomasiser/vim-code-dark'
+	use 'LunarVim/darkplus.nvim'
 	use 'marko-cerovac/material.nvim'
 
 	-- Status Bar
@@ -61,11 +62,11 @@ return require('packer').startup(function(use)
 	use 'ThePrimeagen/harpoon'
 
 	-- Markdown Previewer
-	use({ 
+	use({
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && yarn install",
 		setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-		ft = { "markdown" }, 
+		ft = { "markdown" },
 	})
 
 	use 'mg979/vim-visual-multi' -- Multiple cursors
