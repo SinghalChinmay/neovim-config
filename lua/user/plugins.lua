@@ -83,7 +83,7 @@ return require('packer').startup(function(use)
 		branch = 'release'
 	}
 	use "rafi/vim-venom" -- Virtual environment management for python
-	-- use "github/copilot.vim"
+	use "github/copilot.vim"
 
 	use {
 		'dsznajder/vscode-es7-javascript-react-snippets',

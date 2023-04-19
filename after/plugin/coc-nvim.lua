@@ -1,4 +1,3 @@
-
 local bind = vim.keymap.set
 
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
@@ -17,22 +16,22 @@ bind("n", "gr", "<Plug>(coc-references)", {silent = true})
 bind("n", "<C-a>", vim.cmd.CocDiagnostics)
 
 function _G.show_docs()
-    local cw = vim.fn.expand('<cword>')
-    if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
-        vim.api.nvim_command('h ' .. cw)
-    elseif vim.api.nvim_eval('coc#rpc#ready()') then
-        vim.fn.CocActionAsync('doHover')
-    else
-        vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
-    end
+	local cw = vim.fn.expand('<cword>')
+	if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
+		vim.api.nvim_command('h ' .. cw)
+	elseif vim.api.nvim_eval('coc#rpc#ready()') then
+		vim.fn.CocActionAsync('doHover')
+	else
+		vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
+	end
 end
 bind("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 
--- keyset("n", "<C-k>", ":Copilot<CR>") -- Copilot completions
+bind("n", "<leader>co", ":Copilot<CR>") -- Copilot completions
+
+vim.g.python3_host_prog = "/usr/bin/python3"
 
 -- Vim Venom activation
 vim.g.venom_loaded = 1
 require('venom').setup()
-
-vim.g.python3_host_prog = "/usr/bin/python3"
 
