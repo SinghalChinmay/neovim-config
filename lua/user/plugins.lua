@@ -98,6 +98,12 @@ return require('packer').startup(function(use)
 
 	use 'andweeb/presence.nvim' -- Discord rich presence
 
+	-- Highlight comments starting from words like TODO, HACK,FIXME etc
+	use {
+		'folke/todo-comments.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 	-- use 'segeljakt/vim-silicon' -- Code screenshots
 
 	if packer_bootstrap then
