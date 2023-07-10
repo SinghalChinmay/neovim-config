@@ -66,5 +66,6 @@
         }
       }
     }
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
