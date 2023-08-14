@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-commentary' -- gcc for commenting the current line, and gc + <Up>/<Down> for commenting multiple lines
 
 	-- Colorschemes
-	use 'tomasiser/vim-code-dark'
+	use 'sainnhe/sonokai'
 	use 'LunarVim/darkplus.nvim'
 	use 'marko-cerovac/material.nvim'
 
@@ -51,7 +51,6 @@ return require('packer').startup(function(use)
 		tag = "v3.*",
 		requires = 'nvim-tree/nvim-web-devicons'
 	}
-
 	use 'moll/vim-bbye' -- closing buffers without messing up the layout.
 
 	use 'ap/vim-css-color'
@@ -77,14 +76,6 @@ return require('packer').startup(function(use)
 		tag = '*'
 	}
 
-	-- Code completion
-	use {
-		'neoclide/coc.nvim',
-		branch = 'release'
-	}
-	use "rafi/vim-venom" -- Virtual environment management for python
-	use "github/copilot.vim"
-
 	use {
 		'dsznajder/vscode-es7-javascript-react-snippets',
 		run = 'yarn install --frozen-lockfile && yarn compile'
@@ -105,6 +96,33 @@ return require('packer').startup(function(use)
 	}
 
 	-- use 'segeljakt/vim-silicon' -- Code screenshots
+
+	-- LSP setup
+
+	use 'onsails/lspkind.nvim'
+
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v2.x',
+		requires = {
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},             -- Required
+			{                                      -- Optional
+				'williamboman/mason.nvim',
+				run = function()
+					pcall(vim.api.nvim_command, 'MasonUpdate')
+				end,
+			},
+			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+			-- Autocompletion
+			{'hrsh7th/nvim-cmp'},     -- Required
+			{'hrsh7th/cmp-path'},
+			{'hrsh7th/cmp-nvim-lsp'}, -- Required
+			{'L3MON4D3/LuaSnip'},     -- Required
+		}
+	}
+	use "github/copilot.vim"
 
 	if packer_bootstrap then
 		require("packer").sync()
