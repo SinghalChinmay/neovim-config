@@ -117,13 +117,17 @@ return require('packer').startup(function(use)
 
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-path'},
 			{'hrsh7th/cmp-nvim-lsp'}, -- Required
 			{'L3MON4D3/LuaSnip'},     -- Required
+			{'hrsh7th/cmp-path'},
 		}
 	}
 	use "github/copilot.vim"
-
+	use {
+		'tzachar/cmp-tabnine',
+		run='./install.sh',
+		requires = 'hrsh7th/nvim-cmp'
+	}
 	if packer_bootstrap then
 		require("packer").sync()
 	end

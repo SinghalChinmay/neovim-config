@@ -30,6 +30,16 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
+local tabnine = require("cmp_tabnine.config")
+
+tabnine:setup({
+	max_lines = 1000;
+	max_num_results = 4;
+	sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+})
+
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
@@ -37,6 +47,7 @@ cmp.setup({
 	sources = {
 		{name = "nvim_lsp"},
 		{name = "buffer"},
+		{name = "cmp_tabnine"},
 		{name = "path"},
 	},
 	snippet = {
@@ -50,11 +61,18 @@ cmp.setup({
 	},
 	formatting = {
 		fields = {'abbr', 'kind', 'menu'},
-		format = lspkind.cmp_format({
-			mode = 'symbol',
-			maxwidth = 50,
-			ellipsis_char = '...',
-		})
+		format = function(entry, vim_item)
+	 		vim_item.kind = lspkind.symbolic(vim_item.kind, {mode = "symbol"})
+	 		if entry.source.name == "cmp_tabnine" then
+	 			vim_item.kind = "⌬"
+	 			if (entry.completion_item.data or {}).multiline then
+	 				vim_item.kind = vim_item.kind .. ' ' .. '[ML]'
+	 			end
+	 		end
+	 		local maxwidth = 50
+	 		vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
+	 		return vim_item
+		end,
 	},
 	mapping = {
 		['<cr>'] = cmp.mapping.confirm({
