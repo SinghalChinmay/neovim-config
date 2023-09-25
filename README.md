@@ -1,10 +1,10 @@
 # My Neovim configuration!
 
 ```bash
+# Create your own config! 
 mkdir -p $HOME/.config/nvim
 cd $HOME/.config/nvim
-touch init.vim
-touch coc-settings.json # If you're gonna use "coc.nvim" plugin.
+touch init.lua
 ```
 
 ## Screenshots

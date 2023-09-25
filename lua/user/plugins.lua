@@ -119,6 +119,7 @@ return require('packer').startup(function(use)
 			{'hrsh7th/nvim-cmp'},     -- Required
 			{'hrsh7th/cmp-nvim-lsp'}, -- Required
 			{'L3MON4D3/LuaSnip'},     -- Required
+			{'saadparwaiz1/cmp_luasnip'}, -- Optional
 			{'hrsh7th/cmp-path'},
 		}
 	}
@@ -128,6 +129,7 @@ return require('packer').startup(function(use)
 		run='./install.sh',
 		requires = 'hrsh7th/nvim-cmp'
 	}
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
