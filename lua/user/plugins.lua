@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-telescope/telescope.nvim',
-		tag = '0.1.0',
+		tag = '*',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- File Explorer
