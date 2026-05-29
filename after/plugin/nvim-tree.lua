@@ -46,6 +46,7 @@ local function on_attach(bufnr)
 	bind('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
 	bind('n', 'i', api.node.open.horizontal, opts('Open: Horizontal Split'))
 	bind('n', 't', api.node.open.tab, opts('Open: New Tab'))
+	bind("n", "<C-h>", api.tree.toggle) -- Toggle the tree
 end
 
 require("nvim-tree").setup({
@@ -65,10 +66,10 @@ require("nvim-tree").setup({
 		show_on_dirs = false,
 		show_on_open_dirs = true,
 		icons = {
-			hint = " ",
+			hint = '⚑',
 			info = " ",
 			warning = " ",
-			error = " ",
+			error = '✘',
 		},
 	},
 	renderer = {
@@ -117,9 +118,14 @@ require("nvim-tree").setup({
 	},
 })
 
-bind("n", "<leader>n", api.tree.focus) -- Focus the file explorer
-bind("n", "<C-t>", api.tree.toggle) -- Toggle the tree
-
+bind("n", "<leader>n", function()
+	if vim.fn.bufname():match 'NvimTree_' then
+		vim.cmd.wincmd 'p'
+	else
+		vim.cmd('NvimTreeFocus')
+	end
+end
+) -- Focus the file explorer
 
 vim.api.nvim_create_autocmd({"VimEnter"}, {callback = open_nvim_tree})
 
