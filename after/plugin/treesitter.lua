@@ -1,6 +1,6 @@
 local ts = require("nvim-treesitter")
 
-local langs = {"javascript", "typescript", "python", "c", "lua", "rust"}
+local langs = {"javascript", "typescript", "python", "c", "lua", "rust", "cpp"}
 ts.install(langs)
 
 vim.api.nvim_create_autocmd("FileType", {

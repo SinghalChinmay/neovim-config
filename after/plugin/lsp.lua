@@ -36,6 +36,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bind.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
     bind.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     bind.set("n", "gr", function() vim.lsp.buf.references() end, opts)
+	bind.set("n", "<leader>ca", function () vim.lsp.buf.code_action() end, opts)
   end,
 })
 -- (Optional) Configure lua language server for neovim
